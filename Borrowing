@@ -1,0 +1,23 @@
+import java.time.LocalDate;
+
+public class BorrowingProcess {
+    private Book book;
+    private Borrower borrower;
+    private LocalDate borrowDate;
+    private LocalDate returnDate;
+
+    public BorrowingProcess(Book book, Borrower borrower, LocalDate borrowDate, LocalDate returnDate) {
+        this.book = book;
+        this.borrower = borrower;
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
+    }
+
+    public void displayInfo() {
+        System.out.println("الكتاب (ISBN): " + book.getIsbn());
+        System.out.println("المستعير: " + borrower.getId());
+        System.out.println("تاريخ الإعارة: " + borrowDate);
+        System.out.println("تاريخ الإرجاع: " + returnDate);
+        System.out.println("--------------------");
+    }
+}
